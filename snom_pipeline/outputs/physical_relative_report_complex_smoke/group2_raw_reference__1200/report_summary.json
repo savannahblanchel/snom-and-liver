@@ -1,0 +1,16 @@
+{
+  "batch": "group2_raw_reference__1200",
+  "source_dir": "outputs\\relative_analysis\\group2_raw_reference",
+  "pred_plot": "outputs\\physical_relative_report_complex_smoke\\group2_raw_reference__1200\\group2_raw_reference__1200_pred_vs_true.png",
+  "resid_plot": "outputs\\physical_relative_report_complex_smoke\\group2_raw_reference__1200\\group2_raw_reference__1200_residuals.png",
+  "stability_plot": "outputs\\physical_relative_report_complex_smoke\\group2_raw_reference__1200\\group2_raw_reference__1200_parameter_stability.png",
+  "n_samples": 3,
+  "n_classes": 1,
+  "amp_mse_mean": 0.028002760417895067,
+  "phase_circular_mse_mean": 1.2516365340234357,
+  "complex_mse_mean": 1.5873631153201029,
+  "residual_l2_mean": 0.7867900848412505,
+  "reference_file": "",
+  "reference_mode": "none",
+  "center_shortlist_csv": "outputs\\physical_relative_report_complex_smoke\\group2_raw_reference__1200\\center_parameter_shortlist.csv"
+}

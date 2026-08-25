@@ -1,0 +1,19 @@
+{
+  "batch": "group2_raw_reference__1280",
+  "source_dir": "outputs\\relative_analysis\\group2_raw_reference",
+  "pred_plot": "outputs\\physical_relative_report_phasecal_offset_w01\\group2_raw_reference__1280\\group2_raw_reference__1280_pred_vs_true.png",
+  "resid_plot": "outputs\\physical_relative_report_phasecal_offset_w01\\group2_raw_reference__1280\\group2_raw_reference__1280_residuals.png",
+  "stability_plot": "outputs\\physical_relative_report_phasecal_offset_w01\\group2_raw_reference__1280\\group2_raw_reference__1280_parameter_stability.png",
+  "n_samples": 7,
+  "n_classes": 2,
+  "amp_mse_mean": 0.0023920764578459143,
+  "phase_circular_mse_mean": 0.8620231377281135,
+  "complex_mse_mean": 1.0612066609913757,
+  "residual_l2_mean": 0.37103184277045076,
+  "reference_file": "",
+  "reference_mode": "none",
+  "phase_calibration_mode": "offset",
+  "phase_calibration_phi0": -0.34895295915859087,
+  "phase_calibration_phi1": 0.0,
+  "center_shortlist_csv": "outputs\\physical_relative_report_phasecal_offset_w01\\group2_raw_reference__1280\\center_parameter_shortlist.csv"
+}

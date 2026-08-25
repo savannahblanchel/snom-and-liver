@@ -1,0 +1,12 @@
+{
+  "batch": "group2_raw_reference__1200",
+  "n_samples": 3,
+  "n_analysis_groups": 1,
+  "amp_mse_mean": 0.07947586628812678,
+  "phase_circular_mse_mean": 2.796963161864815,
+  "synthetic_samples": 64,
+  "pretrain_epochs": 20,
+  "refine_steps": 40,
+  "phase_weight": 0.0,
+  "model": "senior-style semi-infinite multi-phonon + MLP"
+}

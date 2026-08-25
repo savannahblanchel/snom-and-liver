@@ -1,0 +1,21 @@
+{
+  "batch": "group2_raw_reference__1280",
+  "dataset_name": "group2_raw_reference",
+  "tune_wavenumber": "1280",
+  "n_samples": 7,
+  "n_classes": 2,
+  "wmin": 690.0,
+  "wmax": 1750.0,
+  "stride": 4,
+  "n_lorentz": 3,
+  "shared_gain": 0.7203695228810438,
+  "shared_phase": 3.141592651269968,
+  "shared_amp_offset": 0.0,
+  "reference_file": "D:\\undergra\\na_nn\\snom光谱1\\2026-08-06 113047 PH PSP gan-ikzf-bg.txt",
+  "reference_mode": "fixed_multiplicative_layer",
+  "amp_mse_mean": 0.010093930744420138,
+  "phase_circular_mse_mean": 3.2228116562258586,
+  "residual_l2_mean": 1.9960081403133103,
+  "classes": "organoid|tonsil",
+  "analysis_groups": "TA0038190758_PD1_1.500__1280|人扁桃体_14_PD1_1.500__1280|类器官2 ZX Cell 2__1280"
+}

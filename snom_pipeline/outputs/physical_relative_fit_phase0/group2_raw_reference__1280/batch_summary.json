@@ -1,0 +1,21 @@
+{
+  "batch": "group2_raw_reference__1280",
+  "dataset_name": "group2_raw_reference",
+  "tune_wavenumber": "1280",
+  "n_samples": 7,
+  "n_classes": 2,
+  "wmin": 690.0,
+  "wmax": 1750.0,
+  "stride": 4,
+  "n_lorentz": 3,
+  "shared_gain": 0.17806377423211342,
+  "shared_phase": -3.1415924947947644,
+  "shared_amp_offset": 0.0,
+  "reference_file": "",
+  "reference_mode": "none",
+  "amp_mse_mean": 0.002394765532298251,
+  "phase_circular_mse_mean": 0.9592549343666408,
+  "residual_l2_mean": 0.5007206822389929,
+  "classes": "organoid|tonsil",
+  "analysis_groups": "TA0038190758_PD1_1.500__1280|人扁桃体_14_PD1_1.500__1280|类器官2 ZX Cell 2__1280"
+}

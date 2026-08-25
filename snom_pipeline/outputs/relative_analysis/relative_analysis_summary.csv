@@ -1,0 +1,2 @@
+﻿dataset,n_points,n_samples,n_classes,amp_abs_dev_mean,phase_abs_dev_mean,amp_std_mean,phase_std_mean,wavenumber_min,wavenumber_max,source_dir
+group2_raw_reference,83,10,2,0.041848166761622244,0.42819442691773607,0.04793856719705418,0.5075757423284204,690.0,1800.0,outputs\group2_raw_reference

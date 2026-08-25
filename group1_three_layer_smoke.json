@@ -1,0 +1,152 @@
+{
+  "dataset": "D:\\undergra\\snom_project\\outputs\\group1_bg_normalized",
+  "model": "multi-lorentz",
+  "fit_mode": "measured-bg",
+  "n_spectra": 2,
+  "indices": [
+    0,
+    1
+  ],
+  "n_wavenumbers": 12,
+  "wmin": 700.0,
+  "wmax": 1600.0,
+  "step": 80,
+  "epochs": 2,
+  "start_id": 0,
+  "center_init": "fixed",
+  "center_jitter": 40.0,
+  "seed": 13,
+  "amp_normalization": "reference-band",
+  "reference_band": [
+    1500.0,
+    1600.0
+  ],
+  "amp_baseline": "none",
+  "als_lam": 100000.0,
+  "als_p": 0.01,
+  "als_niter": 10,
+  "use_amp_scale": false,
+  "use_amp_offset": false,
+  "shared_params": {
+    "g_factor": 0.698000151456833,
+    "g_phase": 0.05800034828789931,
+    "amp_scale": 1.0,
+    "amp_offset": 0.0,
+    "tip_radius_nm": 33.0,
+    "tip_length_nm": 300.0,
+    "sample_thickness_nm": 100.0,
+    "substrate_material": "si",
+    "use_three_layer_reflectivity": true
+  },
+  "best_epoch": {
+    "epoch": 1,
+    "total_loss": 0.4875095464526127,
+    "amp_relative_loss": 0.3050943433813584,
+    "amp_shape_loss": 0.5880331708850346,
+    "phase_circular_loss": 0.35406910349995707,
+    "amp_mse": 0.3002316305626791,
+    "phase_mse": 0.8880754345067479,
+    "g_factor": 0.698000151456833,
+    "g_phase": 0.05800034828789931,
+    "amp_scale": 1.0,
+    "amp_offset": 0.0
+  },
+  "spectra": [
+    {
+      "spectrum_index": 0,
+      "source_file": "D:\\undergra\\na_nn\\snom光谱1\\2026-08-06 120451 PH PSP gan-IKZF-1000-b-1.txt",
+      "bg_reference_source": "D:\\undergra\\na_nn\\snom光谱1\\2026-08-06 113047 PH PSP gan-ikzf-bg.txt",
+      "tip_frequency_hz": 266070.594,
+      "tapping_amplitude_nm": 89.467,
+      "material_params": {
+        "centers": [
+          900.0019977668999,
+          1199.9979993889622,
+          1450.0019995739863
+        ],
+        "strengths": [
+          1.0019984997059062,
+          0.9979990701646866,
+          1.0019999452134212
+        ],
+        "gammas": [
+          79.99800039414639,
+          80.00200049465302,
+          79.99800002252175
+        ],
+        "eps_inf": 4.998000712753652,
+        "g_factor": 0.698000151456833,
+        "g_phase": 0.05800034828789931,
+        "reference_material": "si"
+      }
+    },
+    {
+      "spectrum_index": 1,
+      "source_file": "D:\\undergra\\na_nn\\snom光谱1\\2026-08-06 120707 PH PSP gan-IKZF-1000-b-2.txt",
+      "bg_reference_source": "D:\\undergra\\na_nn\\snom光谱1\\2026-08-06 113047 PH PSP gan-ikzf-bg.txt",
+      "tip_frequency_hz": 266070.594,
+      "tapping_amplitude_nm": 89.465,
+      "material_params": {
+        "centers": [
+          900.0019994034972,
+          1199.9979994001121,
+          1450.0019998335895
+        ],
+        "strengths": [
+          1.0019996078713653,
+          0.9979990097615968,
+          1.0020000564952234
+        ],
+        "gammas": [
+          79.99799994389745,
+          80.00200046557828,
+          79.99799980562042
+        ],
+        "eps_inf": 4.998000175705338,
+        "g_factor": 0.698000151456833,
+        "g_phase": 0.05800034828789931,
+        "reference_material": "si"
+      }
+    }
+  ],
+  "history": [
+    {
+      "epoch": 0,
+      "total_loss": 0.49006436799021547,
+      "amp_relative_loss": 0.3072663024998149,
+      "amp_shape_loss": 0.5894249162674343,
+      "phase_circular_loss": 0.3544183642354204,
+      "amp_mse": 0.30242995706664233,
+      "phase_mse": 0.8891521557396818,
+      "g_factor": 0.6990000000260812,
+      "g_phase": 0.05900000003200889,
+      "amp_scale": 1.0,
+      "amp_offset": 0.0
+    },
+    {
+      "epoch": 1,
+      "total_loss": 0.4875095464526127,
+      "amp_relative_loss": 0.3050943433813584,
+      "amp_shape_loss": 0.5880331708850346,
+      "phase_circular_loss": 0.35406910349995707,
+      "amp_mse": 0.3002316305626791,
+      "phase_mse": 0.8880754345067479,
+      "g_factor": 0.698000151456833,
+      "g_phase": 0.05800034828789931,
+      "amp_scale": 1.0,
+      "amp_offset": 0.0
+    }
+  ],
+  "n_starts": 1,
+  "selected_start_id": 0,
+  "start_summaries": [
+    {
+      "start_id": 0,
+      "best_total_loss": 0.4875095464526127,
+      "amp_mse": 0.3002316305626791,
+      "phase_mse": 0.8880754345067479,
+      "g_factor": 0.698000151456833,
+      "g_phase": 0.05800034828789931
+    }
+  ]
+}

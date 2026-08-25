@@ -1,0 +1,2 @@
+﻿analysis_group,class_label,specimen_name,tune_wavenumber,center_param,mean,std,cv,boundary_hit_rate,min,max,n_samples
+类器官1 ZX Cell 1__1200,organoid,类器官1 ZX Cell 1,1200,center_2,1419.5653076472342,71.19686369658807,0.05015398961431976,0.0,1335.85644775566,1509.877040263366,3

@@ -1,0 +1,23 @@
+{
+  "batch": "group2_raw_reference__1200",
+  "dataset_name": "group2_raw_reference",
+  "tune_wavenumber": "1200",
+  "n_samples": 3,
+  "n_classes": 1,
+  "wmin": 690.0,
+  "wmax": 1750.0,
+  "stride": 4,
+  "n_lorentz": 3,
+  "shared_gain": 0.10841116952069184,
+  "shared_phase": 1.5907791514952365,
+  "shared_amp_offset": 0.0,
+  "reference_file": "",
+  "reference_mode": "none",
+  "fit_space": "complex",
+  "amp_mse_mean": 0.02800276041789511,
+  "phase_circular_mse_mean": 1.2516365340234357,
+  "complex_mse_mean": 1.5873631153201033,
+  "residual_l2_mean": 0.7867900848412505,
+  "classes": "organoid",
+  "analysis_groups": "类器官1 ZX Cell 1__1200"
+}

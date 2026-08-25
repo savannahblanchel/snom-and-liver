@@ -1,0 +1,13 @@
+{
+  "batch": "group2_raw_reference__1280",
+  "source_dir": "outputs\\relative_analysis\\group2_raw_reference",
+  "pred_plot": "outputs\\physical_relative_report_phase0_n2\\group2_raw_reference__1280\\group2_raw_reference__1280_pred_vs_true.png",
+  "resid_plot": "outputs\\physical_relative_report_phase0_n2\\group2_raw_reference__1280\\group2_raw_reference__1280_residuals.png",
+  "stability_plot": "outputs\\physical_relative_report_phase0_n2\\group2_raw_reference__1280\\group2_raw_reference__1280_parameter_stability.png",
+  "n_samples": 7,
+  "n_classes": 2,
+  "amp_mse_mean": 0.007829782377867658,
+  "phase_circular_mse_mean": 2.834144457347827,
+  "residual_l2_mean": 1.3243100720529934,
+  "center_shortlist_csv": "outputs\\physical_relative_report_phase0_n2\\group2_raw_reference__1280\\center_parameter_shortlist.csv"
+}

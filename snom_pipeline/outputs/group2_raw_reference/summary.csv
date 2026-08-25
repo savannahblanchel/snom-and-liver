@@ -1,0 +1,10 @@
+﻿metric,value
+input_dirs,D:\undergra\na_nn\snom光谱2;D:\undergra\na_nn\snom-lei1
+processing_mode,raw-reference
+wavenumber_min,690.0
+wavenumber_max,1800.0
+total_sample_points,83
+normalized_points,83
+dropped_wavenumber_count,0
+dropped_wavenumbers,[]
+status_counts,{'ok': 83}

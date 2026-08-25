@@ -1,0 +1,12 @@
+{
+  "batch": "group2_raw_reference__1200",
+  "source_dir": "snom_pipeline\\outputs\\relative_analysis\\group2_raw_reference",
+  "pred_plot": "snom_pipeline\\outputs\\physical_relative_report\\group2_raw_reference__1200\\group2_raw_reference__1200_pred_vs_true.png",
+  "resid_plot": "snom_pipeline\\outputs\\physical_relative_report\\group2_raw_reference__1200\\group2_raw_reference__1200_residuals.png",
+  "stability_plot": "snom_pipeline\\outputs\\physical_relative_report\\group2_raw_reference__1200\\group2_raw_reference__1200_parameter_stability.png",
+  "n_samples": 3,
+  "n_classes": 1,
+  "amp_mse_mean": 0.0021657879191877664,
+  "phase_circular_mse_mean": 0.7288951098507521,
+  "residual_l2_mean": 0.3353385557615218
+}
