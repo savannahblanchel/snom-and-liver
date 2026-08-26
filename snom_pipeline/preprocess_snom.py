@@ -192,6 +192,8 @@ def build_dataset(
     norm_phase = []
     raw_amp = []
     raw_phase = []
+    bg_amp_rows = []
+    bg_phase_rows = []
     sample_ids = []
     point_ids = []
 
@@ -219,6 +221,8 @@ def build_dataset(
                 norm_phase.append(phase_raw.astype(np.float32))
                 raw_amp.append(amp_raw.astype(np.float32))
                 raw_phase.append(phase_raw.astype(np.float32))
+                bg_amp_rows.append(np.full_like(amp_raw, np.nan, dtype=np.float32))
+                bg_phase_rows.append(np.full_like(phase_raw, np.nan, dtype=np.float32))
                 sample_ids.append(sample.sample_id)
                 point_ids.append(sample.point_id)
             elif bg is not None:
@@ -237,6 +241,8 @@ def build_dataset(
                 norm_phase.append(phase_norm.astype(np.float32))
                 raw_amp.append(amp_raw.astype(np.float32))
                 raw_phase.append(phase_raw.astype(np.float32))
+                bg_amp_rows.append(bg_amp.astype(np.float32))
+                bg_phase_rows.append(bg_phase.astype(np.float32))
                 sample_ids.append(sample.sample_id)
                 point_ids.append(sample.point_id)
         except Exception as exc:  # Keep batch processing auditable.
@@ -273,6 +279,8 @@ def build_dataset(
     norm_phase_arr = np.asarray(norm_phase, dtype=np.float32)
     raw_amp_arr = np.asarray(raw_amp, dtype=np.float32)
     raw_phase_arr = np.asarray(raw_phase, dtype=np.float32)
+    bg_amp_arr = np.asarray(bg_amp_rows, dtype=np.float32)
+    bg_phase_arr = np.asarray(bg_phase_rows, dtype=np.float32)
 
     dropped_wavenumbers: list[float] = []
     if norm_amp_arr.size:
@@ -283,6 +291,8 @@ def build_dataset(
         norm_phase_arr = norm_phase_arr[:, finite_columns]
         raw_amp_arr = raw_amp_arr[:, finite_columns]
         raw_phase_arr = raw_phase_arr[:, finite_columns]
+        bg_amp_arr = bg_amp_arr[:, finite_columns]
+        bg_phase_arr = bg_phase_arr[:, finite_columns]
 
     npz_name = "spectra_normalized.npz" if mode == MODE_BG_NORMALIZED else "spectra_raw_reference.npz"
     np.savez_compressed(
@@ -296,6 +306,8 @@ def build_dataset(
         o2p_norm=norm_phase_arr,
         o2a_raw=raw_amp_arr,
         o2p_raw=raw_phase_arr,
+        o2a_background=bg_amp_arr,
+        o2p_background=bg_phase_arr,
         sample_id=np.asarray(sample_ids),
         point_id=np.asarray(point_ids),
         processing_mode=np.asarray(mode),

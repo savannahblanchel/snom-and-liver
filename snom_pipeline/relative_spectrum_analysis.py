@@ -61,7 +61,13 @@ def parse_dataset_arg(value: str) -> tuple[str, Path]:
     return name, Path(path)
 
 
-def summarise_group(meta: pd.DataFrame, amp: np.ndarray, phase: np.ndarray) -> tuple[pd.DataFrame, dict[str, np.ndarray]]:
+def summarise_group(
+    meta: pd.DataFrame,
+    amp: np.ndarray,
+    phase: np.ndarray,
+    bg_amp: np.ndarray | None = None,
+    bg_phase: np.ndarray | None = None,
+) -> tuple[pd.DataFrame, dict[str, np.ndarray]]:
     wavenumber = np.asarray(meta.attrs.get("wavenumber"))
     if wavenumber.size == 0:
         raise ValueError("Missing wavenumber axis")
@@ -80,6 +86,8 @@ def summarise_group(meta: pd.DataFrame, amp: np.ndarray, phase: np.ndarray) -> t
     phase_mean_list = []
     phase_std_list = []
     phase_median_list = []
+    bg_amp_mean_list = []
+    bg_phase_mean_list = []
     amp_abs_dev_list = []
     phase_abs_dev_list = []
 
@@ -87,6 +95,8 @@ def summarise_group(meta: pd.DataFrame, amp: np.ndarray, phase: np.ndarray) -> t
         idx = sample_meta.index.to_numpy()
         amp_block = amp[idx]
         phase_block = phase[idx]
+        bg_amp_block = bg_amp[idx] if bg_amp is not None else None
+        bg_phase_block = bg_phase[idx] if bg_phase is not None else None
         specimen_name = str(sample_meta["specimen_name"].iloc[0])
         class_label = str(sample_meta["class_label"].iloc[0])
         if specimen_name.startswith("TA0038190758"):
@@ -98,6 +108,9 @@ def summarise_group(meta: pd.DataFrame, amp: np.ndarray, phase: np.ndarray) -> t
         phase_median = np.median(phase_block, axis=0)
         amp_std = np.std(amp_block, axis=0, ddof=0)
         phase_std = np.std(phase_block, axis=0, ddof=0)
+        if bg_amp_block is not None and bg_phase_block is not None:
+            bg_amp_mean_list.append(np.nanmean(bg_amp_block, axis=0))
+            bg_phase_mean_list.append(np.nanmean(bg_phase_block, axis=0))
 
         sample_labels.append(class_label)
         class_labels.append(class_label)
@@ -148,6 +161,9 @@ def summarise_group(meta: pd.DataFrame, amp: np.ndarray, phase: np.ndarray) -> t
         "phase_std": np.asarray(phase_std_list, dtype=np.float32),
         "phase_median": np.asarray(phase_median_list, dtype=np.float32),
     }
+    if bg_amp_mean_list and bg_phase_mean_list:
+        sample_arrays["bg_amp_mean"] = np.asarray(bg_amp_mean_list, dtype=np.float32)
+        sample_arrays["bg_phase_mean"] = np.asarray(bg_phase_mean_list, dtype=np.float32)
     return table, sample_arrays
 
 
@@ -159,9 +175,11 @@ def analyse_dataset(dataset_name: str, dataset_dir: Path, output_dir: Path) -> d
     meta.attrs["wavenumber"] = np.asarray(spectra["wavenumber"], dtype=np.float64)
     amp = np.asarray(spectra["o2a"], dtype=np.float64)
     phase = np.asarray(spectra["o2p"], dtype=np.float64)
+    bg_amp = np.asarray(spectra["o2a_background"], dtype=np.float64) if "o2a_background" in spectra else None
+    bg_phase = np.asarray(spectra["o2p_background"], dtype=np.float64) if "o2p_background" in spectra else None
     wavenumber = np.asarray(spectra["wavenumber"], dtype=np.float64)
 
-    sample_table, sample_arrays = summarise_group(meta, amp, phase)
+    sample_table, sample_arrays = summarise_group(meta, amp, phase, bg_amp=bg_amp, bg_phase=bg_phase)
 
     dataset_output = output_dir / dataset_name
     dataset_output.mkdir(parents=True, exist_ok=True)

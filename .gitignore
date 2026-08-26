@@ -10,3 +10,4 @@ node_modules/
 tmp/
 docx_render_base/
 docx_render_check/
+snom_pipeline/outputs/
