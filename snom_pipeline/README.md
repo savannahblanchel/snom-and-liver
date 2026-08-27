@@ -144,5 +144,5 @@ python snom_pipeline\plot_liver_tumor_waveforms.py `
 - `physical_ml_platform.py`: physics + ML fitting platform.
 - `physical_feature_selector.py`: stability and separation based feature screening.
 - `physical_param_classifier.py`: unknown spectrum refit and classification.
+- `physical_relative_report.py`: predicted-vs-true plots and parameter stability reports.
 - `plot_liver_tumor_waveforms.py`: waveform QC plotting.
-- `scan_fixed_g_platform.py`: fixed `G` sensitivity scan.

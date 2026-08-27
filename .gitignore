@@ -15,3 +15,9 @@ dataset_reports_ki67_fixed/
 *.docx
 group1_*.json
 build_organ_source_summary_doc.py
+
+snom_pipeline/classification_plsda.py
+snom_pipeline/classification_plsda_sklearn.py
+snom_pipeline/physical_batch_relative_fit.py
+snom_pipeline/ROUTE_INVENTORY.md
+snom_pipeline/scan_fixed_g_platform.py
