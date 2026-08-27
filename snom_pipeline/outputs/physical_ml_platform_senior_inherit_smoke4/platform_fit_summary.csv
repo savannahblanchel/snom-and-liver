@@ -1,3 +1,0 @@
-﻿batch,n_samples,n_analysis_groups,amp_mse_mean,phase_circular_mse_mean,synthetic_samples,pretrain_epochs,refine_steps,phase_weight,model
-group2_raw_reference__1200,3,1,0.07947586628812678,2.796963161864815,64,20,40,0.0,senior-style semi-infinite multi-phonon + MLP
-group2_raw_reference__1280,7,3,0.05450170150662529,2.406237384970236,64,20,40,0.0,senior-style semi-infinite multi-phonon + MLP

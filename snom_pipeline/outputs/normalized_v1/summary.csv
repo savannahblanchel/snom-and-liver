@@ -1,9 +1,0 @@
-﻿metric,value
-input_dirs,D:\undergra\na_nn\snom光谱1;D:\undergra\na_nn\snom光谱2
-wavenumber_min,690.0
-wavenumber_max,1800.0
-total_sample_points,105
-normalized_points,60
-dropped_wavenumber_count,3
-dropped_wavenumbers,"[1676.0, 1677.0, 1678.0]"
-status_counts,"{'small_background_amplitude': 60, 'missing_background': 45}"

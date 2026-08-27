@@ -11,3 +11,7 @@ tmp/
 docx_render_base/
 docx_render_check/
 snom_pipeline/outputs/
+dataset_reports_ki67_fixed/
+*.docx
+group1_*.json
+build_organ_source_summary_doc.py
